@@ -1,0 +1,161 @@
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Intro JS - dom</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel="stylesheet" href="./CSS/estilo.css"/>
+
+
+    </head>
+
+    <body>
+         <div class="btns-cores">
+            <input type="button" name=""value=''onclick="cor1()"
+                        class = "btn-cor1"/>
+            <input type="button" name=""value=''onclick="cor2()"
+                        class = "btn-cor2"/>
+            <input type="button" name=""value=''onclick="cor3()"
+                        class = "btn-cor3"/>
+
+         </div>
+            <div class="img2">
+               <center> <img src='img.PNG'></center>
+            </div>
+    
+            <main class="principal">
+                <div class='content'>
+                    <div class="row">
+                          <div class="col-12">
+                              
+            <div class="msg">
+                <h1>Deixe seu recado!</h1>
+
+            </div>
+                
+                <section class = "form">
+                              <form >
+                                  <section class = "cont-form">
+                                        <label for="nome">Nome  </label>
+                                        <input type="text" name=""
+                                        id='nome'/><br>
+            
+                                        <br>
+                                        <label for="mensagem"> Mensagem  </label>
+                                        <input type="text" name=""
+                                        id='mensagem'/><br>
+                                        <br><input type="button" name=""
+                                        value='Enviar'
+                                        onclick="enviar()"
+                                        class = "btn-enviar"
+                                        />
+                                  </section>
+                                  
+                              </form>
+                            </section>
+      
+                          </div>
+      
+                      </div>
+      
+                      <div class="row">
+                          <div clas="col-12">
+                              <div clas="to-do-list-box">
+                                  <ul id = "mylist">
+                                      
+      
+                                  </ul>
+                              </div>
+                          </div>
+      
+                      </div>
+      
+              </div>
+              <div class="ExemploEvento">
+                <button onclick="exibeAlerta()" >Créditos</button>
+            </div> 
+            </main>
+         
+            
+            
+            <script type="text/javascript">
+                var ul = document.getElementById("mylist");
+                var li;
+                var itemId;
+                var item;
+                enviar= function (){
+                        
+                        if((document.getElementById("nome").value != "") && (document.getElementById("mensagem").value != "")){
+    
+                            item=document.getElementById("nome");
+                            mensagem = document.getElementById("mensagem");
+                            var elemento = item.value + ' : '+mensagem.value+'   '
+    
+                            itemId = ul.childElementCount;
+    
+                            li= createItemEl(elemento,itemId);
+                            li.appendChild(createRemoveTaskBtn(itemId));
+                            ul.appendChild(li);
+                            item.value = "";
+                        }
+    
+            }
+    
+            removeTask = function( itemId ){
+    
+                for( i = 0 ; i < ul.children.length ; i++){
+    
+                    if(ul.children[i].getAttribute("index") == itemId ){
+    
+                        ul.children[i].remove();
+    
+                    }
+                }
+            }
+    
+            createItemEl = function(itemValue, itemId){
+    
+                let li = document.createElement("li");
+    
+                li.setAttribute("index", itemId);
+                li.style.fontFamily='fira-code'
+                li.style.fontSize='20px'
+                li.style.listStyle='none'
+    
+                li.appendChild(document.createTextNode(itemValue));
+    
+                return li;
+            }
+    
+            createRemoveTaskBtn = function(itemId){
+                let btn =  document.createElement("button");
+                btn.setAttribute("onclick", "removeTask("+itemId+")"); 
+                btn.innerHTML ="Excluir";
+                btn.style.color="deeppink"
+                return btn;
+            }
+    
+            function exibeAlerta(){
+                alert("Desenvolvimento de Software para Web\n Lauana Cartaxo")
+            }
+    
+            function cor1(){
+                var corpo=document.getElementsByTagName("body")
+                corpo[0].style.backgroundColor='salmon'
+    
+            }
+            function cor2(){
+                var corpo=document.getElementsByTagName("body")
+                corpo[0].style.backgroundColor='pink'
+            }
+            function cor3(){
+                var corpo=document.getElementsByTagName("body")
+                corpo[0].style.backgroundColor='white'
+            }
+    
+    
+            </script>
+           
+  
+    </body>
+</html>

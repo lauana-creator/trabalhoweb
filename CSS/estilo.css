@@ -1,0 +1,87 @@
+body{
+    background-color: white;
+}
+
+
+.img { 
+    height:100px;
+    width:1000px;
+    position: absolute;
+    display:flex;
+    top: 45px;
+    right:-12%;     
+}
+#id{
+    height:100px;
+    display:flex left;
+    position: absolute;
+    top: 0px;
+    right:60%;
+}
+
+.img2{
+    margin-top: 100px;
+    height:-5%;
+    width:-5%;
+
+}
+
+.btn-enviar{
+    position: relative;
+    left:55%;
+    color:deeppink;
+    
+}
+.btn-cor1{
+    height:30px;
+    width:30px;
+    position: absolute;
+    display:flex;
+    top: 10px;
+    left:180; 
+    background-color:salmon;
+}
+.btn-cor2{
+    height:30px;
+    width:30px;
+    position: absolute;
+    display:flex;
+    top: 10px;
+    left:280; 
+    background-color:pink;
+}
+.btn-cor3{
+    height:30px;
+    width:30px;
+    position: absolute;
+    display:flex;
+    top: 10px;
+    left:380; 
+    background-color:aliceblue;
+}
+
+.msg{
+    color:deeppink;
+}
+.principal{
+     margin-left: 2%;
+     text-align: center;
+}
+
+.form{
+    text-align: center;
+    margin: auto;
+    left: 10%;
+    width:200px;
+
+}
+.cont-form{
+    text-align: justify;
+}
+.cont-form label{
+    color: deeppink;
+}
+
+.ExemploEvento button{
+    color:deeppink;
+}
